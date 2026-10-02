@@ -353,3 +353,119 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* TEACHER PAGE */
+.teacher-page {
+    background-color: var(--background);
+    min-height: calc(100vh - 78px);
+}
+
+.teacher-header {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.teacher-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.teacher-header p:not(.eyebrow) {
+    color: #D9E0E8;
+}
+
+.teacher-courses {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+.teacher-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.teacher-section-header h2 {
+    color: var(--navy);
+    font-size: 2rem;
+}
+
+.teacher-section-header p {
+    color: var(--gray);
+}
+
+.teacher-course-list {
+    display: grid;
+    gap: 25px;
+}
+
+.teacher-course-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    border-top: 4px solid var(--gold);
+    padding: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.course-info h3 {
+    color: var(--navy);
+    margin: 10px 0;
+}
+
+.course-info p {
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+
+.course-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.course-actions button,
+.student-row button {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.edit-btn {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+.delete-btn,
+.remove-btn {
+    background-color: #B42318;
+    color: var(--white);
+}
+
+.students {
+    border-top: 1px solid #E5E7EB;
+    margin-top: 25px;
+    padding-top: 20px;
+}
+
+.students h4 {
+    color: var(--navy);
+    margin-bottom: 15px;
+}
+
+.student-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.student-row span {
+    color: var(--text);
+}
