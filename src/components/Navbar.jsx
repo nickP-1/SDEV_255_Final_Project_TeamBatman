@@ -1,30 +1,57 @@
-
-
-function Navbar() {
+function Navbar({ onHomeClick, onTeacherClick }) {
     return (
-        <>
-            <nav className="navbar">
+        <nav className="navbar">
 
-                <div className="nav-container">
+            <div className="nav-container">
 
-                    <a href="index.html" className="nav-logo">CourseHub</a>
+                <a
+                    href="#"
+                    className="nav-logo"
+                    onClick={(event) => {
+                        event.preventDefault()
+                        onHomeClick()
+                    }}
+                >
+                    CourseHub
+                </a>
 
-                        <div className="nav-links">
+                <div className="nav-links">
 
-                            <a href="index.html" className="nav-link">Home</a>
+                    <a
+                        href="#"
+                        className="nav-link"
+                        onClick={(event) => {
+                            event.preventDefault()
+                            onHomeClick()
+                        }}
+                    >
+                        Home
+                    </a>
 
-                            <a href="courses.html" className="nav-link">Courses</a>
+                    <a href="courses.html" className="nav-link">
+                        Courses
+                    </a>
 
-                            <a href="schedule.html" className="nav-link">Schedule</a>
+                    <a href="schedule.html" className="nav-link">
+                        Schedule
+                    </a>
 
-                            <a href="login.html" className="nav-link">Login</a>
+                    <a href="login.html" className="nav-link">
+                        Login
+                    </a>
 
-                        </div>
+                    <button
+                        className="nav-link teacher-nav-button"
+                        onClick={onTeacherClick}
+                    >
+                        Teacher Portal
+                    </button>
 
                 </div>
 
-            </nav>
-        </>
+            </div>
+
+        </nav>
     )
 }
 

@@ -2,9 +2,9 @@
     --navy: #0B1F3A;
     --light-navy: #132D4F;
     --gold: #D4AF37;
-    --background: #F4F6F8;
+    --background: rgb(83, 107, 124);
     --white: #FFFFFF;
-    --text: #1F2933;
+    --text: #dae5ec;
     --gray: #667085;
 }
 * {
@@ -193,7 +193,7 @@ a {
 }
 
 .section-heading p:last-child {
-    color: var(--gray);
+    color: var(--text);
 }
 
 
@@ -390,12 +390,12 @@ footer {
 }
 
 .teacher-section-header h2 {
-    color: var(--navy);
+    color: var(--text);
     font-size: 2rem;
 }
 
 .teacher-section-header p {
-    color: var(--gray);
+    color: var(--text);
 }
 
 .teacher-course-list {
@@ -467,5 +467,12 @@ footer {
 }
 
 .student-row span {
-    color: var(--text);
+    color: var(--navy);
+}
+.teacher-nav-button {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
 }
