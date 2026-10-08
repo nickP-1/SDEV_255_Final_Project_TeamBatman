@@ -25,7 +25,7 @@ function Teacher({ courses, setCourses }) {
             credits: Number(newCourse.credits),
             students: []
         }
-
+        console.log("Creating course:", course)
         setCourses([...courses, course])
 
         setNewCourse({

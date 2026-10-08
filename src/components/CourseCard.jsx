@@ -1,5 +1,3 @@
-
-
 function CourseCard(props) {
     return (
         <div className = "course-card">
