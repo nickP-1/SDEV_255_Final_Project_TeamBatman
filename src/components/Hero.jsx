@@ -22,10 +22,6 @@ function Hero() {
                         and make your learning journey a breeze.
                     </p>
 
-                    <a href="courses.html" className="btn">
-                        Explore Courses
-                    </a>
-
                 </div>
 
             </section>

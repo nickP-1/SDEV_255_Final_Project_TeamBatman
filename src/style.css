@@ -476,3 +476,89 @@ footer {
     font-size: inherit;
     cursor: pointer;
 }
+
+/* INTERACTIVE COURSE CARDS */
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.course-card-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    border: none;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.course-card-toggle p {
+    margin-bottom: 15px;
+}
+
+.expand-label {
+    margin-top: 14px;
+    color: var(--navy);
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.course-card-details {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid #D9DEE7;
+}
+
+.course-card-details .course-description {
+    color: var(--gray);
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+    margin-bottom: 20px;
+}
+
+.course-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+.add-to-checkout-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: var(--navy);
+    color: var(--white);
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-to-checkout-btn:hover:not(:disabled) {
+    background-color: var(--light-navy);
+}
+
+.add-to-checkout-btn:disabled {
+    background-color: var(--gold);
+    color: var(--navy);
+    cursor: default;
+}
+
+.course-card-toggle:focus-visible, .add-to-checkout-btn:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+}
+
+
+@media (max-width: 768px) {
+    .course-card {
+        padding: 24px;
+    }
+}

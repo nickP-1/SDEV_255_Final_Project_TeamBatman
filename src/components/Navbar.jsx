@@ -28,9 +28,6 @@ function Navbar({ onHomeClick, onTeacherClick }) {
                         Home
                     </a>
 
-                    <a href="courses.html" className="nav-link">
-                        Courses
-                    </a>
 
                     <a href="schedule.html" className="nav-link">
                         Schedule
