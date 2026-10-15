@@ -1,0 +1,472 @@
+/* -- Page Styling -- */
+
+.student-page {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text);
+}
+
+.student-page .student-header {
+    border-bottom: 2px solid var(--light-navy);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.student-page .eyebrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    margin: 0 0 6px 0;
+}
+
+.student-page h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--white);
+    margin: 0 0 8px 0;
+}
+
+.student-page .student-header p:not(.eyebrow) {
+    font-size: 1.05rem;
+    color: var(--text);
+    margin: 0;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+
+/* Workspace split layout */
+
+.student-page .workspace-split {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+
+.student-page .student-course-list {
+    flex: 2;
+    min-width: 0;
+}
+
+.student-page .student-schedule-builder {
+    flex: 1.1;
+    position: sticky;
+    top: 20px;  /* Keeps the Schedule Builder pinned on the screen when scrolling course lists */
+}
+
+
+/* Schedule Builder SideBar Card Container */
+
+.student-page .schedule-builder-container {
+    background: var(--navy);
+    border: 1px solid var(--light-navy);
+    border-radius: 12x;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    padding: 24px;
+}
+
+.student-page .schedule-builder-container h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0 0 8px 0;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 6px;
+}
+
+.student-page .schedule-builder-container p {
+    font-size: 0.88rem;
+    color: var(--text);
+    margin: 0 0 20px 0;
+    line-height: 1.4;
+    opacity: 0.85;
+}
+
+
+/* Schedule Builder List Rows Style */
+
+.student-page .schedule-builder-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.student-page .schedbuild-item-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    background: var(--light-navy);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: all 0.15s ease;
+}
+
+.student-page .schedbuild-item-card:hover {
+    background: #193a63;
+    transform: translateY(-1px);
+}
+
+.student-page .schedbuild-item-card > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.student-page .schedbuild-item-heading {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.student-page .schedbuild-item-sub {
+    font-size: 0.82rem;
+    color: var(--gold);
+    font-weight: 500;
+}
+
+/* Buttons and Interactive Stuff */
+
+.student-page .schedguild-remove-btn {
+    background: rgba(229, 62, 62, 0.15);
+    color: #fc8181;
+    border: 1px solid rgba(254, 215, 215, 0.2);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.student-page .schedbuild-summary {
+    margin-top: 8px;
+    border-top: 1px dassed var(--light-navy);
+    padding-top: 16px;
+}
+
+.student-page .schedbuild-summary p {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text);
+    margin: 0;
+}
+
+.student-page .schedbuild-summary span:last-child {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.student-page .schedbuild-submit-btn {
+    width: 100%;
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: all 0.15s ease;
+    box-shadow: 0 4px 6px -1px rgba(212, 175, 55, 0.2);
+}
+
+.student-page .schedbuild-submit-btn:hover {
+    background: #f1c43f;
+    transform: translateY(-1px);
+}
+
+.student-page .schedbuild-submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* COURSE LIST CATALOG STYLES */
+
+.student-page .catalog-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.student-page .catalog-search-block {
+    margin-bottom: 24px;
+}
+
+.student-page .catalog-search-input {
+    width: 100%;
+    padding: 14px 18px;
+    background: var(--light-navy);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--white);
+    font-size: 1rem;
+    box-sizing: border-box;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.15s ease;
+}
+
+.student-page .catalog-search-input:focus {
+    outline: none;
+    border-color: var(--gold)
+}
+
+.student-page .semester-section {
+    margin-bottom: 35px;
+}
+
+.student-page .semester-heading {
+    color: var(--gold);
+    border-bottom: 2px solid var(--light-navy);
+    padding-bottom: 8px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.student-page .catalog-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Aligns the left text blocks so the description wraps properly */
+
+.student-page .schedbuild-item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-right: 15px;
+}
+
+.student-page .catalog-item-desc {
+    margin: 6px 0 0 0;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    color: var(--text);
+    opacity: 0.85;
+}
+
+/* Overrides the global enroll styles to turn it into an inline button */
+
+.student-page .add-course-btn {
+    width: max-content !important;
+    min-width: 120px;
+    height: fit-content;
+    align-self: center;
+    margin: 10px 0 0 0 !important;
+    padding: 10px 20px !important;
+    white-space: nowrap;
+}
+
+/*====================================
+    ENROLLED COURSE LIST STYLES
+  ==================================== */ 
+
+.student-page .enrolled-courses-container {
+    background: var(--navy);
+    border: 1px solid var(--light-navy);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.student-page .enrolled-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--light-navy);
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+
+.student-page .enrolled-header-row h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0 0 4px 0;
+}
+
+.student-page .enrolled-sub {
+    font-size: 0.9rem;
+    color: var(--text);
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* Clear gold total display */
+.student-page .enrolled-credit-total {
+    background: var(--light-navy);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.student-page .enrolled-credit-total span {
+    color: var(--gold);
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+/* Multi-column grid: Responsive Card Sizes */
+
+.student-page .enrolled-schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320, 1fr));
+    gap: 20px;
+}
+
+.student-page .enrolled-course-card {
+    background: var(--light-navy);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.15s ease;
+}
+
+.student-page .enrolled-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.student-page .enrolled-course-number {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--navy);
+    background: var(--gold);
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.student-page .enrolled-course-term {
+    font-size: 0.8rem;
+    color: var(--text);
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+.student-page .enrolled-course-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--white);
+    margin: 0 0 4px 0;
+}
+
+.student-page .enrolled-course-subject {
+    font-size: 0.85rem;
+    color: var(--gold);
+    margin: 0 0 10px 0;
+    font-weight: 500;
+}
+
+.student-page .enrolled-course-desc {
+    font-size: 0.88rem;
+    color: var(--text);
+    opacity: 0.85;
+    line-height: 1.4;
+    margin: 0 0 16px 0;
+    flex-grow: 1;  /* Pushes card footers down evenly along the horizontal plane */ 
+}
+
+.student-page .enrolled-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 12px;
+    font-size: 0.85rem;
+}
+
+.student-page .enrolled-course-credits {
+    color: var(--text);
+    font-weight: 600;
+}
+
+
+
+/* Empty cart presentation */
+.student-page .schedule-builder-container > p:only-of-type {
+    text-align: center;
+    padding: 30px 15px;
+    border: 2px dashed var(--light-navy);
+    background: rgba(19, 45, 79, 0.4);
+    border-radius: 8px;
+    color: var(--text);
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Fallback Loading Message */
+
+.student-page .loading-message {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--text);
+    font-weight: 500;
+    padding: 100px 20px;
+}
+
+.student-page .no-course-fallback,
+.student-page .catalog-loading-text {
+    font-size: 0.9rem;
+    color: var(--text);
+    opacity: 0.6;
+    font-style: italic;
+    margin: 0;
+    padding: 10px 0;
+}
+
+/* Student unregistered fallback */
+
+.student-page .unregistered-fallback {
+    text-align: center;
+    padding: 40px 20px;
+    border: 2px dashed var(--light-navy);
+    background: rgba(19, 45, 79, 0.3);
+    border-radius: 8px;
+}
+
+.student-page .unregistered-fallback p {
+    font-weight: 0.85rem;
+    color: var(--text);
+    opacity: 0.7;
+}
+
+.student-page .unregistered-fallback span {
+    font-size: 0.85rem;
+    color: var(--text);
+    opacity: 0.7;
+}
+
+/* Media formatting */
+
+@media (max-width: 1024) {
+    .student-page .workspace-split {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .student-page .student-schedule-builder {
+        position: static;
+        width: 100%;
+    }
+}

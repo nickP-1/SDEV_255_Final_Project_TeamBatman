@@ -1,33 +1,33 @@
-
+import { Link } from 'react-router-dom';
 
 function Hero() {
-    return (
-        <>
-            <section className="hero">
+  const firstName = localStorage.getItem('firstName');
+  const token = localStorage.getItem('token');
 
-                <div className="hero-content">
+  return (
+    <section className="hero">
+      <div className="hero-content">
+        <p className="eyebrow">
+          COURSEHUB
+        </p>
 
-                    <p className="eyebrow">
-                        COURSEHUB
-                        {/* -- display Student or Teacher based on login -- */}
-                    </p>
+        <h1>
+          {token && firstName
+            ? `Welcome back, ${firstName}`
+            : 'Welcome to CourseHub'}
+        </h1>
 
-                    <h1>
-                        Welcome to CourseHub
-                        {/* -- change this to display user's name -- */}
-                    </h1>
+        <p>
+          Navigate your course schedule smoothly
+          and make your learning journey a breeze.
+        </p>
 
-                    <p>
-                        Navigate your course schedule smoothly
-                        and make your learning journey a breeze.
-                    </p>
-
-                </div>
-
-            </section>
-
-        </>
-    )
+        <Link to="/courses" className="btn">
+          Explore Courses
+        </Link>
+      </div>
+    </section>
+  );
 }
 
-export default Hero
+export default Hero;
