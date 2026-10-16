@@ -1,8 +1,9 @@
-
-import { useState } from 'react'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function CourseCard(props) {
-    const [isExpanded, setIsExpanded] = useState(false)
+    const [isExpanded, setIsExpanded] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <div className={`course-card ${isExpanded ? 'expanded' : ''}`}>
@@ -11,11 +12,15 @@ function CourseCard(props) {
                 role="button"
                 tabIndex={0}
                 aria-expanded={isExpanded}
-                onClick={() => setIsExpanded(!isExpanded)}
+                onClick={() => setIsExpanded((previous) => !previous)}
                 onKeyDown={(event) => {
                     if (event.key === 'Enter' || event.key === ' ') {
-                        event.preventDefault()
-                        setIsExpanded(!isExpanded)
+                        event.preventDefault();
+                        setIsExpanded((previous) => !previous);
+                    }
+
+                    if (event.key === 'Escape') {
+                        setIsExpanded(false);
                     }
                 }}
             >
@@ -23,8 +28,9 @@ function CourseCard(props) {
                 <h3>{props.title}</h3>
                 <p>{props.dept}</p>
                 <span className="credits">{props.credits} Credits</span>
+
                 <span className="expand-label">
-                    {isExpanded ? 'Hide details ▲' : 'View details ▼'}
+                    {isExpanded ? 'Close details ▲' : 'View details ▼'}
                 </span>
             </div>
 
@@ -39,21 +45,15 @@ function CourseCard(props) {
                         <button
                             type="button"
                             className="add-to-checkout-btn"
-                            disabled={props.isInCheckout}
-                            onClick={(event) => {
-                                event.stopPropagation()
-                                props.onAddToCheckout?.()
-                            }}
+                            onClick={() => navigate('/student')}
                         >
-                            {props.isInCheckout
-                                ? 'Added to Checkout'
-                                : 'Add to Checkout'}
+                            Checkout
                         </button>
                     </div>
                 </div>
             )}
         </div>
-    )
+    );
 }
 
-export default CourseCard
+export default CourseCard;

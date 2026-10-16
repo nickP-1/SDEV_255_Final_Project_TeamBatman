@@ -85,9 +85,7 @@ a {
 }
 
 
-/* =========================
-   HERO SECTION
-   ========================= */
+
 
 .hero {
     background-color: var(--navy);
@@ -123,7 +121,6 @@ a {
 }
 
 
-/* Main heading */
 
 .hero h1 {
     font-size: 3.5rem;
@@ -132,7 +129,6 @@ a {
 }
 
 
-/* Hero description */
 
 .hero p:not(.eyebrow) {
     color: #D9E0E8;
@@ -143,9 +139,7 @@ a {
 }
 
 
-/* =========================
-   BUTTON
-   ========================= */
+
 
 .btn {
     display: inline-block;
@@ -223,7 +217,6 @@ a {
 }
 
 
-/*Card hover*/
 
 .course-card:hover {
     transform: translateY(-4px);
@@ -232,7 +225,6 @@ a {
 }
 
 
-/*Course number*/
 
 .course-number {
     color: var(--gold);
@@ -243,7 +235,6 @@ a {
 }
 
 
-/*Course name*/
 
 .course-card h3 {
     color: var(--navy);
@@ -252,7 +243,6 @@ a {
 }
 
 
-/* Subject */
 
 .course-card p {
     color: var(--gray);
@@ -261,7 +251,6 @@ a {
 }
 
 
-/* Credits */
 
 .credits {
     color: var(--navy);
@@ -477,7 +466,6 @@ footer {
     cursor: pointer;
 }
 
-/* INTERACTIVE COURSE CARDS */
 
 .course-card {
     display: flex;
@@ -560,5 +548,78 @@ footer {
 @media (max-width: 768px) {
     .course-card {
         padding: 24px;
+    }
+}
+
+.course-grid {
+    position: relative;
+    isolation: isolate;
+}
+
+.course-card {
+    position: relative;
+    z-index: 1;
+    transform-origin: center center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.course-card.expanded {
+    position: relative;
+    z-index: 10;
+
+    transform: scale(1.12);
+
+    background-color: var(--white);
+    border-radius: 16px;
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.course-card.expanded .course-card-toggle h3 {
+    font-size: 1.5rem;
+    margin: 12px 0;
+}
+
+.course-card.expanded .course-card-details {
+    position: relative;
+    padding: 15px 10px 10px;
+}
+
+.course-card-close {
+    display: block;
+    margin: 0 0 16px auto;
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 50%;
+    background: #f0f2f5;
+    color: #1f2933;
+
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.course-card-close:hover {
+    background: #e0e5eb;
+    transform: scale(1.08);
+}
+
+/* Smaller zoom on mobile */
+@media (max-width: 768px) {
+    .course-card.expanded {
+        transform: scale(1.04);
+        max-height: 450px;
     }
 }

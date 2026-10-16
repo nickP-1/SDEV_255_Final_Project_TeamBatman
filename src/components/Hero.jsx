@@ -21,10 +21,6 @@ function Hero() {
           Navigate your course schedule smoothly
           and make your learning journey a breeze.
         </p>
-
-        <Link to="/courses" className="btn">
-          Explore Courses
-        </Link>
       </div>
     </section>
   );

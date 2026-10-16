@@ -1,4 +1,3 @@
-
 import { Link, useNavigate } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
 
@@ -41,14 +40,6 @@ function Navbar() {
         <div className="nav-links">
           <Link to="/" className="nav-link">
             Home
-          </Link>
-
-          <Link to="/courses" className="nav-link">
-            Courses
-          </Link>
-
-          <Link to="/schedule" className="nav-link">
-            Schedule
           </Link>
 
           {!token && (
